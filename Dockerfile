@@ -18,7 +18,8 @@ ENV WINEPREFIX=/usr/local/dngconverter WINEARCH=win32 WINEDLLOVERRIDES=mscoree,m
 RUN winetricks settings win7
 
 COPY dngconverter /usr/local/bin
-RUN wget http://download.adobe.com/pub/adobe/dng/win/DNGConverter_9_8.exe && /usr/local/bin/dngconverter -i DNGConverter_9_8.exe && rm -f DNGConverter_9_8.exe
+# download links http://supportdownloads.adobe.com/product.jsp?product=106&platform=Windows
+RUN wget http://download.adobe.com/pub/adobe/dng/win/DNGConverter_9_10.exe && /usr/local/bin/dngconverter -i DNGConverter_9_10.exe && rm -f DNGConverter_9_10.exe
 
 # make wine silent
 ENV WINEDEBUG -all
