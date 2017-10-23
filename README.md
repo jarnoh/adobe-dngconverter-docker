@@ -1,18 +1,18 @@
 adobe-dngconverter-docker
 ====
 
-This image runs Adobe DNG Converter using Ubuntu and WINE.  Current version is 9.8.
+This image runs Adobe DNG Converter using Ubuntu and WINE.  Current version is 10.0.
 
 Instructions
 ---
 
 Here's how to convert test.orf into test.dng with full size preview in current directory using readymade image from Docker Hub:
 
-```docker run --rm -v $(pwd):/work jarnoh/adobe-dngconverter:9.8 -p2 test.orf```
+```docker run --rm -v $(pwd):/work jarnoh/adobe-dngconverter:latest -p2 test.orf```
 
 To see command-line options, run without parameters:
 
-```docker run --rm -v $(pwd):/work jarnoh/adobe-dngconverter:9.8```
+```docker run --rm -v $(pwd):/work jarnoh/adobe-dngconverter:latest ```
 
 Also see [Command Line Support in the Adobe DNG Converter](http://wwwimages.adobe.com/content/dam/Adobe/en/products/photoshop/pdfs/dng_commandline.pdf)
 
