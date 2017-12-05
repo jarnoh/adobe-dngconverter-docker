@@ -8,9 +8,9 @@ WORKDIR /work
 # TODO libpulse0 is needed, otherwise wine/winetricks does not start, how to set sound=disabled without winetricks?
 
 RUN \
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 883E8688397576B6C509DF495A9A06AEF9CB8DB0 && \
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 38AE4F60E356CE050312FA1775CFD31C9E5DB0C8 && \
 apt-get update && \
-apt-get -y install --no-install-recommends wine1.8 winetricks libpulse0 && \
+apt-get -y install --no-install-recommends wine-stable winetricks libpulse0 && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/log/*.log /var/log/apt/*.log /var/cache/debconf
 
 ENV WINEPREFIX=/usr/local/dngconverter WINEARCH=win32 WINEDLLOVERRIDES=mscoree,mshtml= DISPLAY=:0.0
