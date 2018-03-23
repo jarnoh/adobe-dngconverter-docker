@@ -50,10 +50,17 @@ fi
 
 echo dngconverter: $*
 
+if [ "$DNGVER" \> "10_1" ]; then
+	# since 10.2 changed exe location
+	DNGEXE="c:/Program Files/Adobe/Adobe DNG Converter/Adobe DNG Converter.exe"
+else
+	DNGEXE="c:/Program Files/Adobe/Adobe DNG Converter.exe"
+fi
+
 if [ "$1" = "-i" ] 
 then
 	wine "$2" /S
 else
-	wine "c:/Program Files/Adobe/Adobe DNG Converter.exe" $*
+	wine "$DNGEXE" $*
 fi
 
