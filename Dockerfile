@@ -1,6 +1,8 @@
 FROM 32bit/ubuntu:16.04
 MAINTAINER jarnoh@komplex.org
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 COPY ubuntu-wine.list /etc/apt/sources.list.d/ubuntu-wine.list
 
 WORKDIR /work
