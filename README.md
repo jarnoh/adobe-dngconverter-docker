@@ -1,7 +1,7 @@
 adobe-dngconverter-docker
 ====
 
-This image runs Adobe DNG Converter using Ubuntu and WINE.  Current version is 10.3.
+This image runs Adobe DNG Converter using Ubuntu and WINE.
 
 Instructions
 ---
