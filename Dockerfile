@@ -21,7 +21,7 @@ RUN winetricks settings win7
 
 COPY dngconverter /usr/local/bin
 # download links http://supportdownloads.adobe.com/product.jsp?product=106&platform=Windows
-ENV DNGVER=10_4
+ENV DNGVER=10_5
 RUN wget http://download.adobe.com/pub/adobe/dng/win/DNGConverter_${DNGVER}.exe && /usr/local/bin/dngconverter -i DNGConverter_${DNGVER}.exe && rm -f DNGConverter_${DNGVER}.exe
 
 # make wine silent
